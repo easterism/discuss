@@ -1032,12 +1032,20 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 export const fetchData = async () => {
   await delay(2000);
 
-  return await {
+   const user = await fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(data) {
+      return data;
+    })
+
+  console.log(conversations)
+  return {
     data: {
       user: user,
       conversations: conversations,
-      notifications: notifications,
-      archivedConversations: archive,
+      notifications: notifications
     },
   };
 };

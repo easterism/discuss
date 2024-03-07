@@ -111,11 +111,6 @@ onMounted(() => {
       />
 
       <div v-else>
-        <ArchivedButton
-          v-if="store.archivedConversations.length > 0"
-          :open="openArchive"
-          @click="openArchive = !openArchive"
-        />
 
         <div
           v-if="

@@ -2,7 +2,6 @@
 import type { Ref } from "vue";
 import { computed, ref } from "vue";
 
-import Contacts from "@src/components/shared/modals/ComposeModal/Contacts.vue";
 import Group from "@src/components/shared/modals/ComposeModal/Group.vue";
 import Typography from "@src/components/ui/data-display/Typography.vue";
 import Button from "@src/components/ui/inputs/Button.vue";
@@ -27,11 +26,7 @@ const switchTab = (tabName: string) => {
 
 // the active tab contacts or group.
 const activeTab = computed(() => {
-  if (activeTabName.value === "contacts") {
-    return Contacts;
-  } else {
-    return Group;
-  }
+  return Group;
 });
 </script>
 
